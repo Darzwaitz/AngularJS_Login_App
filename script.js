@@ -35,7 +35,9 @@ app.controller('loginCtrl',['$scope', '$http',
                 headers: {
                     'Content-type': 'application/x-www-form-urlencoded'
                 },
-                data: 'username=' + username + '&password=' + password
+                data: `username= ${username}&password=${password}`
+                // data: 'username=' + username + '&password=' + password
+
             }).then(function(response){
                 console.log(response.data);
                 
